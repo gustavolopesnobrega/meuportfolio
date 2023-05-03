@@ -35,7 +35,7 @@ export default function Projetos() {
                 <ul className=' flex justify-center gap-10 align-middle'>
                   <a href="https://www.linkedin.com/in/gustavo-nobrega-514845187/" target='_blank'><AiFillLinkedin className=' ml-1'/><p className=' text-sm py-2'>Linkedin</p></a>
                   <a href="https://github.com/gustavolopesnobrega" target='_blank'><AiFillGithub className=' ml-1'/><p className=' text-sm py-2'>Github</p></a>
-                  <a href="https://api.whatsapp.com/send?phone=5583986377342" target='_blank'><AiOutlineWhatsApp className=' ml-2'/><p className=' text-sm text-gray-700 py-2'>WhatsApp</p></a>
+                  <a href="https://api.whatsapp.com/send?phone=5583998601573" target='_blank'><AiOutlineWhatsApp className=' ml-2'/><p className=' text-sm text-gray-700 py-2'>WhatsApp</p></a>
               
                 </ul>
                 
