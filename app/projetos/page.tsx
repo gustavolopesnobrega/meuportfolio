@@ -3,9 +3,9 @@ import { Inter } from 'next/font/google'
 
 import Image from 'next/image'
 
-import localizadorcep from '/Users/USER/myportifolionext13/public/buscadorcepimg.png'
-import pinterest from '/Users/USER/myportifolionext13/public/pinterestclonedesign.png'
-import bugtrackerimg from '/Users/USER/myportifolionext13/public/bugtracker.jpg'
+import localizadorcep from '/public/buscadorcepimg.png'
+import pinterest from '/public/pinterestclonedesign.png'
+import bugtrackerimg from '/public/bugtracker.jpg'
 import {FaReact} from 'react-icons/fa'
 import {IoLogoJavascript} from 'react-icons/io'
 import {SiTailwindcss, SiMicrosoftsqlserver, SiCss3} from 'react-icons/si'
