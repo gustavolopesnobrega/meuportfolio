@@ -1,9 +1,8 @@
 
 import { Inter } from 'next/font/google'
-import {BsFillMoonStarsFill} from 'react-icons/bs'
+
 import Image from 'next/image'
-import logo from '/Users/USER/myportifolionext13/public/gndevlogo.svg'
-import Link from 'next/link'
+
 import localizadorcep from '/Users/USER/myportifolionext13/public/buscadorcepimg.png'
 import pinterest from '/Users/USER/myportifolionext13/public/pinterestclonedesign.png'
 import bugtrackerimg from '/Users/USER/myportifolionext13/public/bugtracker.jpg'
