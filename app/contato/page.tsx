@@ -11,7 +11,7 @@ export default function Projetos() {
      <section className=" w-full h-fit bg-cover bg-hero-pattern min-h-screen">
      <div className=' text-gray-400 flex-col bg-zinc-900'>
           <nav className="py-6 px-4 flex justify-around align-middle">
-            <ul className=' flex justify-between mx-4 gap-10 md:px-24 lg:px-48 '>
+            <ul className=' flex justify-between mx-4 gap-2 md:px-24 lg:px-48 md:gap-16'>
                 <li className='md:hover:text-slate-50' >
                     <a href="/">INICIO </a>
                   </li>

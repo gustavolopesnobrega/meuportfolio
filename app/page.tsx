@@ -15,7 +15,7 @@ export default function Home() {
       <div className=' text-gray-400 flex-col bg-zinc-900'>
           <nav className="py-6 px-4 flex justify-around align-middle md:m-auto lg:m-auto">
            
-          <ul className=' flex justify-between mx-4 gap-10 md:px-24 lg:px-48 '>
+          <ul className=' flex justify-between mx-4 gap-2 md:px-24 lg:px-48 md:gap-16 '>
               <li className='md:hover:text-slate-50' >
                   <a href="/">INICIO </a>
                 </li>
