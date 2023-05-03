@@ -1,17 +1,9 @@
 
 import { Inter } from 'next/font/google'
-import {BsFillMoonStarsFill} from 'react-icons/bs'
 import {AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp} from 'react-icons/ai'
 import Image from 'next/image'
 import perfil from '../public/perfil.jpg'
-import buscadorcep from '../public/buscadorcepimg.png'
-import pinterestimg from '../public/pinterestclonedesign.png'
-import bugtrackerimg from '../public/bugtracker.jpg'
-import logo from '../public/gndevlogo (2).svg'
-import {FaReact} from 'react-icons/fa'
-import {IoLogoJavascript} from 'react-icons/io'
-import {SiTailwindcss, SiMicrosoftsqlserver, SiCss3} from 'react-icons/si'
-import Link from 'next/link'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
