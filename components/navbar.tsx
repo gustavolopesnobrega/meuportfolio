@@ -9,14 +9,18 @@ function NavBar() {
   
   const [isOpen, setOpen] = useState(false)
 
+  const toggleMenu = () => {
+    setOpen(!isOpen);
+  };
+
   return (
-    <div className=' text-gray-400 flex-col bg-zinc-900  '>
+    <div className='  text-gray-400 flex-col bg-zinc-900 overflow-x-hidden '>
           <nav className=" flex justify-between gap-10 md:py-6 md:flex md:justify-center">
             <div className=' w-60 md:hidden py-5 ml-4 '>
               <Link href={'/'}><Image src={gnlogo} alt='logo'></Image></Link>
               
             </div>
-            <div className={`absolute right-0 top-0 text-black flex justify-between   bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
               <ul className=' flex flex-col gap-10 p-10 text-2xl justify-around  '>
                 <Link href={"/"} className=' border-b-2 divide-slate-700 '>INICIO</Link>
                 <Link href={"/projetos"} className=' border-b-2 divide-slate-900'>PROJETOS</Link>

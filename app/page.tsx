@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className=" w-full h-fit bg-cover bg-hero-pattern text-black pb-2 ">
-     <section className=" min-h-screen overflow-x-hidden "  >
+    <main className=" h-full bg-cover bg-hero-pattern text-black pb-2 overflow-x-hidden ">
+     <section className=" min-h-screen relative "  >
         <NavBar></NavBar>
         <div  className=' px-10 flex-col justify-center lg:flex md:my-8 md:flex-row'>
             <div className=' py-10 text-center max-w-3xl mx-auto mt-6 md:text-xl md:text-left md:mx-20 lg:mx-40 '>
