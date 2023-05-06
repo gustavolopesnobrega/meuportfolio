@@ -9,6 +9,7 @@ import bugtrackerimg from '/public/bugtracker.jpg'
 import {FaReact} from 'react-icons/fa'
 import {IoLogoJavascript} from 'react-icons/io'
 import {SiTailwindcss, SiMicrosoftsqlserver, SiCss3} from 'react-icons/si'
+import NavBar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,26 +17,7 @@ export default function Projetos() {
   return (
     <main className=" w-full h-fit bg-cover bg-hero-pattern text-black pb-2 ">
      <section className="  min-h-screen">
-     <div className=' text-gray-400 flex-col bg-zinc-900'>
-          <nav className="py-6 px-4 flex justify-around align-middle">
-          <ul className=' flex justify-between mx-4 gap-2 md:px-24 lg:px-48 md:gap-16 '>
-              <li className='md:hover:text-slate-50' >
-                  <a href="/">INICIO </a>
-                </li>
-                
-                <li className='md:hover:text-slate-50'>
-                  <a href={"/projetos"}>PROJETOS</a>
-                </li>
-                <li className='md:hover:text-slate-50'>
-                  <a href={"/contato"}>CONTATO</a>
-                </li>
-                <li className=' bg-gradient-to-tr from-sky-600 to-sky-900 text-slate-200 rounded-md min-w-fit '>
-                <a href="https://drive.google.com/u/0/uc?id=1z3EVjeKcGlS-pJRZnjMQ_Tut5__2Ig3H&export=download" target='_blank' className=' font-sans px-2 '>Download CV</a>
-                </li>
-              
-            </ul>
-          </nav>
-        </div>
+     <NavBar></NavBar>
         <div className=' text-black-800 lg:flex gap-10 md:py-10 lg:m-20'>
           <div className=' bg-white shadow-2xl py-8 px-8 rounded-xl my-10  max-w-max justify-center mx-auto md:hover:p-10 ease-in duration-200 cursor-pointer' >
             <div >

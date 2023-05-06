@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import {AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp} from 'react-icons/ai'
 import Image from 'next/image'
 import perfil from '../public/perfil.jpg'
+import NavBar from '@/components/navbar'
 
 
 
@@ -11,30 +12,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main className=" w-full h-fit bg-cover bg-hero-pattern text-black pb-2 ">
-     <section className=" min-h-screen"  >
-      <div className=' text-gray-400 flex-col bg-zinc-900'>
-          <nav className="py-6 px-4 flex justify-around align-middle md:m-auto lg:m-auto">
-           
-          <ul className=' flex justify-between mx-4 gap-2 md:px-24 lg:px-48 md:gap-16 '>
-              <li className='md:hover:text-slate-50' >
-                  <a href="/">INICIO </a>
-                </li>
-                
-                <li className='md:hover:text-slate-50'>
-                  <a href={"/projetos"}>PROJETOS</a>
-                </li>
-                <li className='md:hover:text-slate-50'>
-                  <a href={"/contato"}>CONTATO</a>
-                </li>
-                <li className=' bg-gradient-to-tr from-sky-600 to-sky-900 text-slate-200 rounded-md min-w-fit '>
-                <a href="https://drive.google.com/u/0/uc?id=1z3EVjeKcGlS-pJRZnjMQ_Tut5__2Ig3H&export=download" target='_blank' className=' font-sans px-2 '>Download CV</a>
-                </li>
-              
-            </ul>
-          </nav>
-        </div>
-
-       
+     <section className=" min-h-screen overflow-x-hidden "  >
+        <NavBar></NavBar>
         <div  className=' px-10 flex-col justify-center lg:flex md:my-8 md:flex-row'>
             <div className=' py-10 text-center max-w-3xl mx-auto mt-6 md:text-xl md:text-left md:mx-20 lg:mx-40 '>
                 <h1 className=' text-5xl font-semibold  py-2 text-sky-600'>Gustavo Nobrega</h1>
