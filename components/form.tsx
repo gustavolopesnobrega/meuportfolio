@@ -31,7 +31,7 @@ function MyForm() {
 
 
     return (
-        <form action="" id="form" className=' flex flex-col bg-slate-700 p-10 mx-10 justify-center align-middle max-w-2xl gap-2 md:m-auto text-white rounded-3xl'>
+        <form action="" id="form" className=' flex flex-col bg-slate-700 p-10 mx-10 justify-center align-middle max-w-2xl gap-2 md:m-auto text-white rounded-3xl mb-4'>
               <label htmlFor="name">Nome</label>
               <input type="text" name="name" id="name" value={name} onChange={e => setName(e.target.value)} placeholder='Digite seu nome' required className=' mb-6 text-black'/>
               <label htmlFor="email">Email</label>
