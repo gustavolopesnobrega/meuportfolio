@@ -9,10 +9,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Contato() {
   return (
-    <main className="  text-black pb-2 ">
-     <section className=" w-full h-fit bg-cover bg-hero-pattern min-h-screen">
+    <main className="  text-black pb-2 max-h-view ">
+     <section className="  bg-cover bg-hero-pattern min-h-screen overflow-x-hidden relative">
      <NavBar></NavBar>
-        
             <h1 className=' flex justify-center py-6 text-4xl my-4 text-black'>Deixe sua mensagem !</h1>
             <div className=' text-3xl py-2 gap-10 text-gray md:text-4xl md:justify-normal md:mx-20 md:mt-10 lg:mx-40'>
                 <ul className=' flex justify-center gap-10 align-middle'>

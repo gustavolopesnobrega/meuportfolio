@@ -21,7 +21,7 @@ function NavBar() {
               
             </div>
             <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-              <ul className=' flex flex-col gap-10 p-10 text-2xl justify-around  '>
+              <ul className=' flex flex-col p-10 text-xl justify-evenly max-h-screen '>
                 <Link href={"/"} className=' border-b-2 divide-slate-700 '>INICIO</Link>
                 <Link href={"/projetos"} className=' border-b-2 divide-slate-900'>PROJETOS</Link>
                 <Link href={"/contato"} className=' border-b-2 divide-slate-200'>CONTATO</Link>

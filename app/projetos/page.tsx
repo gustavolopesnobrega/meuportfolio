@@ -15,8 +15,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Projetos() {
   return (
-    <main className=" w-full h-fit bg-cover bg-hero-pattern text-black pb-2 ">
-     <section className="  min-h-screen">
+    <main className=" h-full bg-cover bg-hero-pattern text-black pb-2 overflow-x-hidden ">
+     <section className=" min-h-screen relative "  >
      <NavBar></NavBar>
         <div className=' text-black-800 lg:flex gap-10 md:py-10 lg:m-20'>
           <div className=' bg-white shadow-2xl py-8 px-8 rounded-xl my-10  max-w-max justify-center mx-auto md:hover:p-10 ease-in duration-200 cursor-pointer' >
