@@ -38,16 +38,7 @@ export default function Home() {
                 
             </div>
       </section>
-      <section>
-        <div>
-        <video controls>
-        <source src="/gym-videocanva.mp4" type="video/mp4" />
-        <source src="/gym-videocanva.mp4" type="video/webm" />
-        <source src="/gym-videocanva.mp4" type="video/ogg" />
-        Desculpe, seu navegador não suporta vídeos.
-      </video>
-        </div>
-      </section>
+      
     </main>
   )
 }
