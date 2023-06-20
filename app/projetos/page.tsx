@@ -6,6 +6,7 @@ import Image from 'next/image'
 import localizadorcep from '/public/buscadorcepimg.png'
 import pinterest from '/public/pinterestclonedesign.png'
 import bugtrackerimg from '/public/bugtracker.jpg'
+import cim from '/public/cim.png'
 import {FaReact} from 'react-icons/fa'
 import {IoLogoJavascript} from 'react-icons/io'
 import {SiTailwindcss, SiMicrosoftsqlserver, SiCss3} from 'react-icons/si'
@@ -18,7 +19,16 @@ export default function Projetos() {
     <main className=" h-full bg-cover bg-hero-pattern text-black pb-2 overflow-x-hidden ">
      <section className=" min-h-screen relative "  >
      <NavBar></NavBar>
-        <div className=' text-black-800 lg:flex gap-10 md:py-10 lg:m-20'>
+        <div className=' text-black-800 lg:flex gap-10 md:py-10 lg:m-10'>
+          <div className=' bg-white shadow-2x rounded-3xl h-80' >
+              <div className=' p-4 ' >
+                <a href="https://cimconfederazione.it/" target='_blank'>
+                  <Image src={cim} alt="Buscador de CEP imagem" className=' h-72 rounded-3xl max-w-xs mx-auto md:w-30 ' />
+                </a>
+              </div>
+              <p className=' text-gray text-center mx-auto text-2xl py-2'>Cim - Confederazione.it</p>
+          </div>
+
           <div className=' bg-white shadow-2xl py-8 px-8 rounded-xl my-10  max-w-max justify-center mx-auto md:hover:p-10 ease-in duration-200 cursor-pointer' >
             <div >
               <a href="https://buscador-de-cep-ten-iota.vercel.app/" target='_blank'><Image src={localizadorcep} alt="Buscador de CEP imagem" className=' rounded-3xl max-w-xs mx-auto w-56 md:w-80 ' /></a>

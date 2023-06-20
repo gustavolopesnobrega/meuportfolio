@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'dots-blue': '#6038FF',
+      },
       backgroundImage: {
         'hero-pattern': "url('../public/backgroundbranco.jpg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
