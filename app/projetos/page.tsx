@@ -1,8 +1,6 @@
 
 import { Inter } from 'next/font/google'
-
 import Image from 'next/image'
-
 import localizadorcep from '/public/buscadorcepimg.png'
 import pinterest from '/public/pinterestclonedesign.png'
 import bugtrackerimg from '/public/bugtracker.jpg'
