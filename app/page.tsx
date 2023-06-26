@@ -24,7 +24,7 @@ export default function Home() {
             <p className=' leading-8 text-gray justify-center md:max-h-76 lg:w-[33rem] '>passionate about developing elegant, functional and responsive user interfaces that provide an exceptional experience for end users. When I'm not working, I like to kitesurf, watch videos and series.</p>
             <div className='flex justify-center gap-4 pt-10 md:justify-normal'>
               <a href={"/projetos"}><button className=' bg-black w-44 px-4 h-16 rounded-xl text-lg text-white hover:bg-dots-blue ease-in duration-150'>Check my work</button></a>
-              <a href={"/contato"}><button className=' bg-black w-44 px-4 h-16 rounded-xl text-lg text-white hover:bg-dots-blue ease-in duration-150'>Contact</button></a>
+              <a href={"/contato"}><button className=' bg-black w-44 px-4 h-16 rounded-xl text-lg text-white hover:bg-dots-blue ease-in duration-150'>Contact me</button></a>
             </div>
           </div>
 
