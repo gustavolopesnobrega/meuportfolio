@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'dots-blue': '#6038FF',
+        'dots-blue-2': '#582DFF',
       },
       backgroundImage: {
         'hero-pattern': "url('../public/backgroundbranco.jpg')",

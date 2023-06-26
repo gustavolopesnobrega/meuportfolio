@@ -21,7 +21,7 @@ function NavBar() {
           <Link href={'/'}><Image src={gnlogo} alt='logo'></Image></Link>
         </div>
         <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <ul className=' flex flex-col p-10 text-xl justify-evenly max-h-screen '>
+          <ul className=' flex flex-col py-28 px-64 gap-10 text-xl max-h-screen '>
             <Link href={"/projetos"} className=' border-b-2 divide-slate-900'>work</Link>
             <Link href={"/contato"} className=' border-b-2 divide-slate-200'>contact</Link>
             <Link href={"https://drive.google.com/u/0/uc?id=1z3EVjeKcGlS-pJRZnjMQ_Tut5__2Ig3H&export=download"} className=' border-b-2 divide-slate-200'>resume</Link>
