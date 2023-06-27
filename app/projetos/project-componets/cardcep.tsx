@@ -7,7 +7,7 @@ import { AiOutlineEye } from 'react-icons/ai'
 function CardCep() {
 
     return (
-        <div className="bg-zinc-200 rounded-md flex flex-col p-6 max-w-xs md:max-w-sm lg:max-w-sm">
+        <div className="bg-card-bg rounded-md flex flex-col p-6 max-w-xs md:max-w-sm lg:max-w-sm">
             <div className=" rounded-md flex  justify-center">
                 <Image src={cep} alt="CIM-website" className="h-60 w-auto"></Image>
             </div>

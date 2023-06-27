@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'dots-blue': '#6038FF',
         'dots-blue-2': '#582DFF',
+        'card-bg': '#f3f3f3'
       },
       backgroundImage: {
         'hero-pattern': "url('../public/backgroundbranco.jpg')",
