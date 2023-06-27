@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
 
+
 function NavBar() {
 
   const [isOpen, setOpen] = useState(false)
@@ -17,7 +18,7 @@ function NavBar() {
   return (
     <div className='  text-black flex-col bg-white overflow-x-hidden '>
       <nav className=" flex justify-between  gap-10 md:py-6 md:flex md:justify-center lg:justify-between lg:px-10 ">
-        <div className=' w-48 flex pt-2 md:pt-0 lg:pt-0 gap-2 '>
+        <div className=' w-48 flex pt-4 md:pt-0 lg:pt-0 gap-2 '>
           <Link href={'/'}><Image src={gnlogo} alt='logo'></Image></Link>
           <div className='flex gap-2 pt-2 font-semibold'>
             <button>PT</button>
@@ -30,7 +31,7 @@ function NavBar() {
           <ul className=' flex flex-col py-28 px-64 gap-10 text-xl max-h-screen '>
             <Link href={"/projetos"} className=' border-b-2 divide-slate-900'>work</Link>
             <Link href={"/contato"} className=' border-b-2 divide-slate-200'>contact</Link>
-            <Link href={"https://docs.google.com/document/d/1sHu5FAra7fEetOi43E7ct_58M5eI0tX_uQbNVgX7Ebs/edit?usp=sharing"} className=' border-b-2 divide-slate-200'>resume</Link>
+            <Link href={"https://drive.google.com/u/0/uc?id=1_UGR5wZoTbWZqfVHhlfILHKG2k4kHd9U&export=download"} className=' border-b-2 divide-slate-200'>resume</Link>
           </ul>
         </div>
         <ul className=' hidden md:flex mx-4 gap-2 md:px-24 lg:px-48 md:gap-16 font-medium py-2 lg:text-lg '>
@@ -38,7 +39,7 @@ function NavBar() {
             <a href={"/projetos"}>work</a>
           </li>
           <li className=' text-black md:hover:text-dots-blue'>
-            <a href="https://docs.google.com/document/d/1sHu5FAra7fEetOi43E7ct_58M5eI0tX_uQbNVgX7Ebs/edit?usp=sharing" target='_blank' className=' font-sans px-2 '>resume</a>
+            <a href="https://drive.google.com/u/0/uc?id=1_UGR5wZoTbWZqfVHhlfILHKG2k4kHd9U&export=download" target='_blank' className=' font-sans px-2 '>resume</a>
           </li>
           <li className='md:hover:text-dots-blue'>
             <a href={"/contato"}>contact</a>
