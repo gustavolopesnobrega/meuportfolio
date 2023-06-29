@@ -1,7 +1,8 @@
+
 import { Inter } from 'next/font/google'
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
 import NavBar from '@/components/navbar'
-import MyForm from '@/components/form'
+import MyForm from '@/app/contato/form'
 
 const inter = Inter({ subsets: ['latin'] })
 
