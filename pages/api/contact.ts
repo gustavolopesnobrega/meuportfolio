@@ -25,7 +25,11 @@ const transporter = nodemailer.createTransport({
       refreshToken,
       acessToken
     },
+    tls: {
+      rejectUnauthorized: false, // Ignora erros de certificado autoassinado
+    },
   });
+  
 
 const mailer = ({ senderMail, name, text }) => {
     const from = `${name} <${senderMail}>`;
@@ -43,14 +47,18 @@ const mailer = ({ senderMail, name, text }) => {
     });
 };
 
-export default async (req, res) => { 
+export default async (req: any, res: any) => { 
     const { senderMail, name, content } = req.body;
     if (senderMail === '' || name === '' || content === ''){
         res.status(403).send();
         return; 
     }
 
-    const mailerRes = await mailer ({ senderMail, name, text: content});
-
-    res.send(mailerRes) 
-} 
+    try {
+      const mailerRes = await mailer({ senderMail, name, text: content });
+      res.send(mailerRes);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Ocorreu um erro ao enviar o email.');
+    }
+  };

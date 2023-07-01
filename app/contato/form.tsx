@@ -12,7 +12,7 @@ function MyForm() {
             message: String(event.target.textarea.value)
         };
 
-
+        console.log(data)
         try {
             await sendContactMail(data.name, data.email, data.message)
 

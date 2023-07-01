@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 export const sendContactMail = async (
     name: String,
     senderMail: String,
@@ -18,3 +19,5 @@ export const sendContactMail = async (
     }
 
 };
+
+export default sendContactMail;
