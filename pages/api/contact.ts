@@ -17,7 +17,9 @@ OAuth2_client.setCredentials({ refresh_token: refreshToken});
 const acessToken = OAuth2_client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    service: 'gmail',
+    port: 465,
+    secure: true, 
     auth: {
       type: 'OAuth2',
       user: email,
@@ -26,9 +28,10 @@ const transporter = nodemailer.createTransport({
       refreshToken,
       acessToken
     },
-    // tls: {
-    //   rejectUnauthorized: false, 
-    // },
+    tls: {
+      rejectUnauthorized: false, // Ignora erros de certificado autoassinado
+    },
+    
   });
   
 
@@ -48,7 +51,7 @@ const mailer = ({ senderMail, name, text }) => {
     });
 };
 
-export default async (req , res) => { 
+export default async (req:any , res:any) => { 
     const { senderMail, name, content } = req.body;
     if (senderMail === '' || name === '' || content === ''){
         res.status(403).send();
