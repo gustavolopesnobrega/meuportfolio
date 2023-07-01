@@ -17,8 +17,6 @@ const acessToken = OAuth2_client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
-    port: 465,
-    secure: true,
     auth: {
       type: 'OAuth2',
       user: email,
