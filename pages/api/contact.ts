@@ -17,6 +17,8 @@ const acessToken = OAuth2_client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
+    port: 465,
+    secure: true,
     auth: {
       type: 'OAuth2',
       user: email,
@@ -26,7 +28,7 @@ const transporter = nodemailer.createTransport({
       acessToken
     },
     tls: {
-      rejectUnauthorized: false, // Ignora erros de certificado autoassinado
+      rejectUnauthorized: false, 
     },
   });
   
