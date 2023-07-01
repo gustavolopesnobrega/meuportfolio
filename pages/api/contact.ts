@@ -10,13 +10,14 @@ const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.SECRET_KEY;
 const refreshToken = process.env.REFRESH_TOKEN;
 
+
 const OAuth2_client = new OAuth2(clientId, clientSecret);
 OAuth2_client.setCredentials({ refresh_token: refreshToken});
 
 const acessToken = OAuth2_client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
     auth: {
       type: 'OAuth2',
       user: email,
@@ -25,9 +26,9 @@ const transporter = nodemailer.createTransport({
       refreshToken,
       acessToken
     },
-    tls: {
-      rejectUnauthorized: false, 
-    },
+    // tls: {
+    //   rejectUnauthorized: false, 
+    // },
   });
   
 
