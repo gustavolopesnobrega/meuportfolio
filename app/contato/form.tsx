@@ -1,5 +1,7 @@
 'use client'
 
+import { sendContactMail } from "@/pages/service/sendMail";
+
 function MyForm() {
     async function handleSubmit(event: any) {
         event.preventDefault();
@@ -10,22 +12,15 @@ function MyForm() {
             message: String(event.target.textarea.value)
         };
 
-        console.log(data)
 
-        const response = await fetch("/app/api/hello/contact", {
-            method: 'POST',
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(data),
-        });
+        try {
+            await sendContactMail(data.name, data.email, data.message)
 
-        if (response.ok) {
-            console.log("Message sent successfully")
+        } catch (error) {
+            console.log(error)
         }
-        if (!response.ok) {
-            console.log("Error sending message")
-        }
+
+
     }
     return (
         <form onSubmit={handleSubmit} id="form" className='flex flex-col bg-zinc-800 p-10 mx-10 justify-center align-middle max-w-2xl gap-2 md:m-auto text-white rounded-md mb-4'>
