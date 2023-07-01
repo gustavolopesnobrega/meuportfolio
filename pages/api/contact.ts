@@ -16,7 +16,7 @@ OAuth2_client.setCredentials({ refresh_token: refreshToken});
 const acessToken = OAuth2_client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail.com',
+    service: 'gmail',
     port: 465,
     secure: true,
     auth: {
@@ -49,7 +49,7 @@ const mailer = ({ senderMail, name, text }) => {
     });
 };
 
-export default async (req, res) => { 
+export default async (req , res) => { 
     const { senderMail, name, content } = req.body;
     if (senderMail === '' || name === '' || content === ''){
         res.status(403).send();
