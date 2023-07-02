@@ -51,7 +51,7 @@ const mailer = ({ senderMail, name, text }) => {
     });
 };
 
-export default async (req , res) => { 
+ const sendEmail = async (req , res) => { 
     const { senderMail, name, content } = req.body;
     if (senderMail === '' || name === '' || content === ''){
         res.status(403).send();
@@ -66,3 +66,5 @@ export default async (req , res) => {
       res.status(500).send('Ocorreu um erro ao enviar o email.');
     }
   };
+
+export default sendEmail;
