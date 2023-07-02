@@ -16,23 +16,23 @@ OAuth2_client.setCredentials({ refresh_token: refreshToken});
 
 const acessToken = OAuth2_client.getAccessToken();
 
-const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, 
-    auth: {
-      type: 'OAuth2',
-      user: email,
-      clientId,
-      clientSecret,
-      refreshToken,
-      acessToken
-    },
-    tls: {
-      rejectUnauthorized: false, // Ignora erros de certificado autoassinado
-    },
+// const transporter = nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 465,
+//     secure: true, 
+//     auth: {
+//       type: 'OAuth2',
+//       user: email,
+//       clientId,
+//       clientSecret,
+//       refreshToken,
+//       acessToken
+//     },
+//     tls: {
+//       rejectUnauthorized: false, // Ignora erros de certificado autoassinado
+//     },
     
-  });
+//   });
   
 
 const mailer = ({ senderMail, name, text }) => {
