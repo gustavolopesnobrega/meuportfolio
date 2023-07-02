@@ -16,55 +16,55 @@ OAuth2_client.setCredentials({ refresh_token: refreshToken});
 
 const acessToken = OAuth2_client.getAccessToken();
 
-// const transporter = nodemailer.createTransport({
-//     host: 'smtp.gmail.com',
-//     port: 465,
-//     secure: true, 
-//     auth: {
-//       type: 'OAuth2',
-//       user: email,
-//       clientId,
-//       clientSecret,
-//       refreshToken,
-//       acessToken
-//     },
-//     tls: {
-//       rejectUnauthorized: false, // Ignora erros de certificado autoassinado
-//     },
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, 
+    auth: {
+      type: 'OAuth2',
+      user: email,
+      clientId,
+      clientSecret,
+      refreshToken,
+      acessToken
+    },
+    tls: {
+      rejectUnauthorized: false, // Ignora erros de certificado autoassinado
+    },
     
-//   });
+  });
   
 
-// const mailer = ({ senderMail, name, text }) => {
-//     const from = `${name} <${senderMail}>`;
-//     const message = {
-//         from,
-//         to:`${email}`,
-//         subject:`Nova menssagem de contato - ${name}`,
-//         text,
-//         replyTo: from
-//     };
-//     return new Promise((resolve, reject) => {
-//         transporter.sendMail(message, (error, info) => 
-//         error ? reject(error) : resolve(info)
-//         );
-//     });
-// };
+const mailer = ({ senderMail, name, text }) => {
+    const from = `${name} <${senderMail}>`;
+    const message = {
+        from,
+        to:`${email}`,
+        subject:`Nova menssagem de contato - ${name}`,
+        text,
+        replyTo: from
+    };
+    return new Promise((resolve, reject) => {
+        transporter.sendMail(message, (error, info) => 
+        error ? reject(error) : resolve(info)
+        );
+    });
+};
 
-//  const sendEmail = async (req , res) => { 
-//     const { senderMail, name, content } = req.body;
-//     if (senderMail === '' || name === '' || content === ''){
-//         res.status(403).send();
-//         return; 
-//     }
+ const sendEmail = async (req , res) => { 
+    const { senderMail, name, content } = req.body;
+    if (senderMail === '' || name === '' || content === ''){
+        res.status(403).send();
+        return; 
+    }
 
-//     try {
-//       const mailerRes = await mailer({ senderMail, name, text: content });
-//       res.send(mailerRes);
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).send('Ocorreu um erro ao enviar o email.');
-//     }
-//   };
+    try {
+      const mailerRes = await mailer({ senderMail, name, text: content });
+      res.send(mailerRes);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Ocorreu um erro ao enviar o email.');
+    }
+  };
 
-// export default sendEmail;
+export default sendEmail;
