@@ -51,7 +51,7 @@ const mailer = ({ senderMail, name, text }) => {
     });
 };
 
- const sendEmail = async (req , res) => { 
+ const sendEmail = async (req: any , res: any) => { 
     const { senderMail, name, content } = req.body;
     if (senderMail === '' || name === '' || content === ''){
         res.status(403).send();
