@@ -1,6 +1,6 @@
-import nodemailer from 'nodemailer';
-import { google } from 'googleapis';
 
+import { google } from 'googleapis';
+const nodemailer = require('nodemailer');
 
 const { OAuth2 } = google.auth;
 
@@ -34,8 +34,14 @@ const transporter = nodemailer.createTransport({
     
   });
   
+type MailerParams = {
+  senderMail: any;
+  name: string;
+  text: string;
+};
 
-const mailer = ({ senderMail, name, text }) => {
+
+const mailer = async ({ senderMail, name, text }: MailerParams) => {
     const from = `${name} <${senderMail}>`;
     const message = {
         from,
@@ -45,7 +51,7 @@ const mailer = ({ senderMail, name, text }) => {
         replyTo: from
     };
     return new Promise((resolve, reject) => {
-        transporter.sendMail(message, (error, info) => 
+        transporter.sendMail(message, (error: any, info: any ) => 
         error ? reject(error) : resolve(info)
         );
     });
