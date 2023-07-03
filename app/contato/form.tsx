@@ -1,7 +1,5 @@
 'use client'
-
-import { sendContactMail } from "@/pages/service/sendEmail";
-
+import axios from 'axios';
 
 function MyForm() {
 
@@ -12,6 +10,25 @@ function MyForm() {
         let email = event.target.email.value
         let message = event.target.textarea.value
 
+        const sendContactMail = async (
+            name: String,
+            senderMail: String,
+            content: String
+        ) => {
+            const data = {
+                name,
+                senderMail,
+                content
+            };
+
+            try {
+                return await axios.post('/api/contact', data);
+
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
         try {
             await sendContactMail(name, email, message)
             event.target.name.value = '';
@@ -20,8 +37,6 @@ function MyForm() {
         } catch (error) {
             console.log(error)
         }
-
-
 
     }
     return (
