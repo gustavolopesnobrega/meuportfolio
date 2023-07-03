@@ -1,6 +1,6 @@
 'use client'
 
-import { sendContactMail } from "@/pages/service/sendMail";
+import sendContactMail from "@/pages/service/sendMail"
 
 function MyForm() {
     async function handleSubmit(event: any) {

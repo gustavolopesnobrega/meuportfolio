@@ -41,7 +41,7 @@ type MailerParams = {
 };
 
 
-const mailer = async ({ senderMail, name, text }: MailerParams) => {
+const mailer = ({ senderMail, name, text }: MailerParams) => {
     const from = `${name} <${senderMail}>`;
     const message = {
         from,
