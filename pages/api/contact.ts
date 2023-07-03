@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 
 const { OAuth2 } = google.auth;
 
-const emailadress = process.env.MAIL_ADRESS;
+const email = process.env.MAIL_ADRESS;
 
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.SECRET_KEY;
@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
     secure: true, 
     auth: {
       type: 'OAuth2',
-      user: emailadress,
+      user: email,
       clientId,
       clientSecret,
       refreshToken,
@@ -35,37 +35,38 @@ const transporter = nodemailer.createTransport({
   });
   
 type MailerParams = {
-  name: any;
-  email: string;
-  message: string;
+  senderMail: any;
+  name: string;
+  text: string;
 };
 
 
-const mailer = ({ name, email, message }: MailerParams) => {
-    const from = `${name} <${email}>`;
-    const emailbody = {
+const mailer = async ({ senderMail, name, text }: MailerParams) => {
+    const from = `${name} <${senderMail}>`;
+
+    const message = {
         from,
         to:`${email}`,
         subject:`Nova menssagem de contato - ${name}`,
-        text:`${message}`,
-        replyTo: from
+        text,
+        replyTo: email
     };
-    return new Promise((resolve, reject) => {
-        transporter.sendMail(emailbody, (error: any, info: any ) => 
+    return await new Promise((resolve, reject) => {
+        transporter.sendMail(message, (error: any, info: any ) => 
         error ? reject(error) : resolve(info)
         );
     });
 };
 
  const sendEmail = async (req: any , res: any) => { 
-    const { name, email, message } = req.body;
-    if (email === '' || name === '' || message === ''){
+    const { senderMail, name, content } = req.body;
+    if (senderMail === '' || name === '' || content === ''){
         res.status(403).send();
         return; 
     }
 
     try {
-      const mailerRes = await mailer({ name, email, message });
+      const mailerRes = await mailer({ senderMail, name, text: content });
       res.send(mailerRes);
     } catch (error) {
       console.error(error);
