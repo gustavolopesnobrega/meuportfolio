@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 
 const { OAuth2 } = google.auth;
 
-const email = process.env.MAIL_ADRESS;
+const emailadress = process.env.MAIL_ADRESS;
 
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.SECRET_KEY;
@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
     secure: true, 
     auth: {
       type: 'OAuth2',
-      user: email,
+      user: emailadress,
       clientId,
       clientSecret,
       refreshToken,
@@ -35,37 +35,37 @@ const transporter = nodemailer.createTransport({
   });
   
 type MailerParams = {
-  senderMail: any;
-  name: string;
-  text: string;
+  name: any;
+  email: string;
+  message: string;
 };
 
 
-const mailer = ({ senderMail, name, text }: MailerParams) => {
-    const from = `${name} <${senderMail}>`;
-    const message = {
+const mailer = ({ name, email, message }: MailerParams) => {
+    const from = `${name} <${email}>`;
+    const emailbody = {
         from,
         to:`${email}`,
         subject:`Nova menssagem de contato - ${name}`,
-        text,
+        text:`${message}`,
         replyTo: from
     };
     return new Promise((resolve, reject) => {
-        transporter.sendMail(message, (error: any, info: any ) => 
+        transporter.sendMail(emailbody, (error: any, info: any ) => 
         error ? reject(error) : resolve(info)
         );
     });
 };
 
  const sendEmail = async (req: any , res: any) => { 
-    const { senderMail, name, content } = req.body;
-    if (senderMail === '' || name === '' || content === ''){
+    const { name, email, message } = req.body;
+    if (email === '' || name === '' || message === ''){
         res.status(403).send();
         return; 
     }
 
     try {
-      const mailerRes = await mailer({ senderMail, name, text: content });
+      const mailerRes = await mailer({ name, email, message });
       res.send(mailerRes);
     } catch (error) {
       console.error(error);
