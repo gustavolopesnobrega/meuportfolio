@@ -68,7 +68,7 @@ function MyForm() {
             ></textarea>
 
 
-            <button type="submit" className='p-2 bg-white hover:bg-dots-blue text-black hover:text-white rounded-md ease-in duration-150'>Enviar</button>
+            <button type="submit" className='p-2 bg-white hover:bg-dots-blue text-black hover:text-white rounded-md ease-in duration-150'>Send</button>
         </form>
     );
 }
