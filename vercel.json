@@ -1,8 +1,0 @@
-{
-    "functions": {
-      "api/contact.ts": {
-        "runtime": "vercel-node@14"
-      }
-    }
-  }
-  
