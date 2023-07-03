@@ -1,7 +1,9 @@
 'use client'
 import axios from 'axios';
+import { useState } from 'react';
 
 function MyForm() {
+    const [loading, setLoading] = useState(false)
 
     async function handleSubmit(event: any) {
         event.preventDefault();
@@ -9,6 +11,8 @@ function MyForm() {
         let name = event.target.name.value
         let email = event.target.email.value
         let message = event.target.textarea.value
+
+
 
         const sendContactMail = async (
             name: String,
@@ -30,12 +34,15 @@ function MyForm() {
 
         }
         try {
+            setLoading(true);
             await sendContactMail(name, email, message)
             event.target.name.value = '';
             event.target.email.value = '';
             event.target.textarea.value = '';
         } catch (error) {
-            console.log(error)
+            console.log(error);
+        } finally {
+            setLoading(false);
         }
 
     }
@@ -68,7 +75,7 @@ function MyForm() {
             ></textarea>
 
 
-            <button type="submit" className='p-2 bg-white hover:bg-dots-blue text-black hover:text-white rounded-md ease-in duration-150'>Send</button>
+            <button type="submit" className={`p-2 rounded-md ease-in duration-150 ${loading ? 'bg-gray-500 text-gray-300' : 'bg-white hover:bg-dots-blue text-black hover:text-white'}`} disabled={loading}>Send</button>
         </form>
     );
 }
