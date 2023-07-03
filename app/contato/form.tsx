@@ -1,6 +1,7 @@
 'use client'
 
-import sendContactMail from "@/pages/service/sendMail"
+import axios from 'axios';
+
 
 function MyForm() {
     async function handleSubmit(event: any) {
@@ -13,8 +14,10 @@ function MyForm() {
         };
 
         console.log(data)
+
+
         try {
-            await sendContactMail(data.name, data.email, data.message)
+            return await axios.post('/api/contact', data);
 
         } catch (error) {
             console.log(error)
