@@ -72,7 +72,7 @@ const mailer = async ({ senderMail, name, text }: MailerParams) => {
       
     } catch (error) {
       console.error(error);
-      res.status(500).send();
+      res.status(500).send('Ocorreu um erro ao enviar o email.');
     }
   };
 
