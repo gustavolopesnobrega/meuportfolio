@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
 import NavBar from '@/components/navbar'
 import MyForm from '@/app/contato/form'
+import { Toaster } from 'react-hot-toast'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,17 @@ export default function Contato() {
         <h1 className=' flex justify-center text-4xl my-4 text-black'>Get in touch with me. </h1>
         <p className='flex justify-center pb-14'>Let me know if you are interested in my services or collaboration, I will reply as soon as possible.</p>
         <MyForm></MyForm>
+        <div className=' bg-dots-blue'>
+          <Toaster
+            position="top-center"
+
+            reverseOrder={false}
+          />
+        </div>
+
+
+
+
         {/* <div className=' text-3xl py-2 gap-10 text-gray md:text-4xl md:justify-normal md:mx-20 md:mt-10 lg:mx-40'>
           <ul className=' flex justify-center gap-10 align-middle'>
             <a href="https://www.linkedin.com/in/gustavo-nobrega-514845187/" target='_blank'><AiFillLinkedin className=' ml-1' /><p className=' text-sm py-2'>Linkedin</p></a>

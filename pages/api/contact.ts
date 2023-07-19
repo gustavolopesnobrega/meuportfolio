@@ -26,7 +26,9 @@ const transporter = nodemailer.createTransport({
       clientId,
       clientSecret,
       refreshToken,
-      acessToken
+      acessToken,
+      expires: 1484314697598
+      
     },
     tls: {
       rejectUnauthorized: false, // Ignora erros de certificado autoassinado
@@ -60,17 +62,17 @@ const mailer = async ({ senderMail, name, text }: MailerParams) => {
 
  const sendEmail = async (req: any , res: any) => { 
     const { senderMail, name, content } = req.body;
-    if (senderMail === '' || name === '' || content === ''){
+    if (senderMail.length < 3 || name.length < 3 || content.length < 5){
         res.status(403).send();
         return; 
     }
-
     try {
       const mailerRes = await mailer({ senderMail, name, text: content });
       res.send(mailerRes);
+      
     } catch (error) {
       console.error(error);
-      res.status(500).send('Ocorreu um erro ao enviar o email.');
+      res.status(500).send();
     }
   };
 
