@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
 
-
 function NavBar() {
 
   const [isOpen, setOpen] = useState(false)
@@ -14,22 +13,21 @@ function NavBar() {
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
-
   return (
     <div className='  text-black flex-col bg-white overflow-x-hidden '>
       <nav className=" flex justify-between  gap-10 md:py-6 md:flex md:justify-center lg:justify-between lg:px-10 ">
         <div className=' w-48 flex pt-4 md:pt-0 lg:pt-0 gap-2 '>
-          <Link href={'/'}><Image src={gnlogo} alt='logo'></Image></Link>
-          <div className='flex gap-2 pt-2 font-semibold'>
+          <Link href={'/'}><Image src={gnlogo} alt='logo' className='h-12 w-32'></Image></Link>
+          {/* <div className='flex gap-2 pt-2 font-semibold'>
             <button>PT</button>
             <span className='pt-2'>|</span>
             <button>EN</button>
-          </div>
+          </div> */}
 
         </div>
         <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <ul className=' flex flex-col py-28 px-64 gap-10 text-xl max-h-screen '>
-            <Link href={"/projetos"} className=' border-b-2 divide-slate-900'>work</Link>
+            <Link href={"/projetos"} className=' border-b-2 divide-slate-900' id="work">work</Link>
             <Link href={"/contato"} className=' border-b-2 divide-slate-200'>contact</Link>
             <Link href={"https://drive.google.com/u/0/uc?id=1_UGR5wZoTbWZqfVHhlfILHKG2k4kHd9U&export=download"} className=' border-b-2 divide-slate-200'>resume</Link>
           </ul>
