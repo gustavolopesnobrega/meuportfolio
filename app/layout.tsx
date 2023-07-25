@@ -1,7 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Gustavo Nobrega',
@@ -16,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.png" sizes="48x48" />
-      <body className={inter.className + ' overflow-x-hidden'}>{children}</body>
+      <body className={poppins.className + ' overflow-x-hidden'}>{children}</body>
     </html>
   )
 }

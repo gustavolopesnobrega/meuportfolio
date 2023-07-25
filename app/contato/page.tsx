@@ -7,8 +7,6 @@ import { Toaster } from 'react-hot-toast'
 
 const inter = Inter({ subsets: ['latin'] })
 
-
-
 export default function Contato() {
   return (
     <main className="  text-black pb-2 max-h-view ">
@@ -25,18 +23,6 @@ export default function Contato() {
           />
         </div>
 
-
-
-
-        {/* <div className=' text-3xl py-2 gap-10 text-gray md:text-4xl md:justify-normal md:mx-20 md:mt-10 lg:mx-40'>
-          <ul className=' flex justify-center gap-10 align-middle'>
-            <a href="https://www.linkedin.com/in/gustavo-nobrega-514845187/" target='_blank'><AiFillLinkedin className=' ml-1' /><p className=' text-sm py-2'>Linkedin</p></a>
-            <a href="https://github.com/gustavolopesnobrega" target='_blank'><AiFillGithub className=' ml-1' /><p className=' text-sm py-2'>Github</p></a>
-            <a href="https://api.whatsapp.com/send?phone=5583998601573" target='_blank'><AiOutlineWhatsApp className=' ml-2' /><p className=' text-sm text-gray-700 py-2'>WhatsApp</p></a>
-
-          </ul>
-
-        </div> */}
       </section>
 
     </main>

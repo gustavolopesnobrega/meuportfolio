@@ -1,12 +1,13 @@
 'use client'
 import { Inter } from 'next/font/google'
-
+import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import perfil from '../public/gnblackwhitewitheffect.png'
 import NavBar from '@/components/navbar'
 
 
 const inter = Inter({ subsets: ['latin'] })
+
 
 
 export default function Home() {
