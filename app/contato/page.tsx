@@ -12,8 +12,11 @@ export default function Contato() {
     <main className="  text-black pb-2 max-h-view ">
       <section className="bg-white min-h-screen overflow-x-hidden relative">
         <NavBar></NavBar>
-        <h1 className=' flex justify-center text-4xl my-4 text-black'>Get in touch with me. </h1>
-        <p className='flex justify-center pb-14'>Let me know if you are interested in my services or collaboration, I will reply as soon as possible.</p>
+        <div className=' px-10'>
+          <h1 className=' flex justify-center text-4xl my-4 text-black'>Get in touch with me. </h1>
+          <p className='flex justify-center pb-14'>Let me know if you are interested in my services or collaboration, I will reply as soon as possible.</p>
+        </div>
+
         <MyForm></MyForm>
         <div className=' bg-dots-blue'>
           <Toaster
