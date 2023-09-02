@@ -7,7 +7,7 @@ import { AiOutlineEye } from 'react-icons/ai'
 function CardBugTracker() {
 
     return (
-        <div className=" bg-card-bg rounded-md flex flex-col p-6 max-w-xs md:max-w-sm lg:max-w-sm ">
+        <div className=" bg-card-bg rounded-md flex flex-col p-6 max-w-md md:max-w-sm lg:max-w-sm ">
             <div className="rounded-md flex  justify-center">
                 <Image src={Bugtracker} alt="CIM-website" className=" lg:h-60 lg:w-auto"></Image>
             </div>

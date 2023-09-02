@@ -7,12 +7,12 @@ import { AiOutlineEye } from 'react-icons/ai'
 function CardCim() {
 
     return (
-        <div className=" bg-card-bg rounded-md flex flex-col p-6 max-w-xs md:max-w-sm lg:max-w-sm ">
+        <div className=" bg-card-bg rounded-md flex flex-col p-6 max-w-md md:max-w-sm lg:max-w-sm ">
             <div className="rounded-md flex  justify-center">
                 <Image src={cim} alt="CIM-website" className=""></Image>
             </div>
             <div className="flex flex-col gap-2">
-                <h2 className="py-4 font-medium text-lg">cimconfederazione website</h2>
+                <h2 className="py-4 font-medium text-lg">cimconfederazione Web Page</h2>
                 <div className=" flex gap-2 text-white">
                     <span className="bg-dots-blue px-4 py-1 rounded-xl ">Html</span>
                     <span className="bg-dots-blue px-4 py-1 rounded-xl">CSS</span>

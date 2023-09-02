@@ -116,7 +116,7 @@ export default function Resume() {
                             <h2 className="flex justify-center text-2xl font-semibold text-white bg-black w-fit ">Work experience</h2>
                         </div>
 
-                        <h3 className="font-semibold">CIM - Confederação de Italianos no mundo</h3>
+                        <h3 className="font-semibold">CIM - Confederazione degli Italiani nel mondo</h3>
                         <span>Freelance Web Developer</span>
                         <span>January 2023 - Present</span>
                         <span>Rome - Italy</span>
@@ -149,7 +149,7 @@ export default function Resume() {
                     <div className=" pb-20">
                         <h2 className="py-10 font-bold text-slate-800">Download my cv as PDF file.</h2>
                         <div>
-                            <a className="bg-black p-4 rounded-md text-white hover:bg-dots-blue ease-in duration-150" href="https://drive.usercontent.google.com/download?id=1qKfIVqi-y_sxpqRZNDtj4vLkiuK354tB&export=download&authuser=0&confirm=t&uuid=dd466a8f-0ea4-4900-87e4-669c211cfb48&at=AC2mKKQn3aOgZEg25AXt9QGeO-rs:1690241135929">Download</a>
+                            <a className="bg-black p-4 rounded-md text-white hover:bg-dots-blue ease-in duration-150" target='_blank' href="https://docs.google.com/document/d/1-Ke0Uc2sv0B6KAu9lN0Xq_sW7kuLdYY0/edit?usp=drive_link&ouid=101309927430688215088&rtpof=true&sd=true">Download</a>
                         </div>
 
                     </div>

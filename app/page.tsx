@@ -18,6 +18,7 @@ import { object, z } from "zod";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Toaster } from 'react-hot-toast';
 import Link from 'next/link';
+import Portfolio from '@/components/portfolio';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -163,6 +164,7 @@ export default function Home() {
           <div className=' text-black-800 flex-col lg:flex gap-10 md:py-10 lg:py-28 margin-auto'>
             <h1 className='flex justify-center py-28 text-3xl ' id='projetos'>Work</h1>
             <div className=' flex flex-wrap justify-center gap-14 md:justify-center lg:justify-center'>
+              <Portfolio></Portfolio>
               <CardCim></CardCim>
               <CardCep></CardCep>
               <CardPinterest></CardPinterest>
