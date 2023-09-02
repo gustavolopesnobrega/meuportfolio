@@ -18,29 +18,25 @@ function NavBar() {
       <nav className=" flex justify-between  gap-10 md:py-6 md:flex md:justify-center lg:justify-between lg:px-10 ">
         <div className=' w-48 flex pt-4 md:pt-0 lg:pt-0 gap-2 '>
           <Link href={'/'}><Image src={gnlogo} alt='logo' className='h-12 w-32'></Image></Link>
-          {/* <div className='flex gap-2 pt-2 font-semibold'>
-            <button>PT</button>
-            <span className='pt-2'>|</span>
-            <button>EN</button>
-          </div> */}
-
         </div>
-        <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-screen transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <ul className=' flex flex-col py-28 px-64 gap-10 text-xl max-h-screen '>
-            <Link href={"/projetos"} className=' border-b-2 divide-slate-900 ' id="work" >work</Link>
-            <Link href={"/contato"} className=' border-b-2 divide-slate-200'>contact</Link>
+            <Link href={"#projetos"} className=' border-b-2 divide-slate-900 ' id="work" >work</Link>
+            <Link href={"#contato"} className=' border-b-2 divide-slate-200'>contact</Link>
             <Link href={"/resume"} className=' border-b-2 divide-slate-200'>resume</Link>
           </ul>
         </div>
         <ul className=' hidden md:flex mx-4 gap-2 md:px-24 lg:px-48 md:gap-16 font-medium py-2 lg:text-lg '>
           <li className='md:hover:text-dots-blue '>
-            <a href={"/projetos"}>work</a>
+            <a href={"#projetos"}>work</a>
           </li>
+
+          <li className='md:hover:text-dots-blue'>
+            <a href={"#contato"} >contact</a>
+          </li>
+
           <li className=' text-black md:hover:text-dots-blue'>
             <a href={"/resume"} >resume</a>
-          </li>
-          <li className='md:hover:text-dots-blue'>
-            <a href={"/contato"} >contact</a>
           </li>
 
 
