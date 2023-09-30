@@ -5,6 +5,8 @@ import gnlogo from '../public/logoglobogn.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
+import Languages from './languages';
+
 
 function NavBar() {
 
@@ -18,7 +20,9 @@ function NavBar() {
       <nav className=" flex justify-between  gap-10 md:py-6 md:flex md:justify-center lg:justify-between lg:px-10 ">
         <div className=' w-48 flex pt-4 md:pt-0 lg:pt-0 gap-2 '>
           <Link href={'/'}><Image src={gnlogo} alt='logo' className='h-12 w-32'></Image></Link>
+          <Languages></Languages>
         </div>
+
         <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-screen transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <ul className=' flex flex-col py-28 px-64 gap-10 text-xl max-h-screen '>
             <Link href={"#projetos"} className=' border-b-2 divide-slate-900 ' id="work" >work</Link>
@@ -41,7 +45,7 @@ function NavBar() {
 
 
         </ul>
-        <div className=' text-3xl py-0 gap-10 text-gray md:text-xl md:justify-normal md:mx-0 md:mt-0 lg:mx-0 hidden lg:flex lg:pt-3'>
+        <div className=' text-3xl py-0 gap-10 text-gray md:text-xl md:justify-normal md:mx-0 md:mt-0 lg:mr-10 hidden lg:flex lg:pt-3'>
           <ul className=' flex justify-center gap-10 align-middle '>
             <a href="https://www.linkedin.com/in/gustavo-nobrega-514845187/" target='_blank'><AiFillLinkedin className=' ml-1 hover:text-dots-blue' /></a>
             <a href="https://github.com/gustavolopesnobrega" target='_blank'><AiFillGithub className=' ml-1 hover:text-dots-blue' /></a>
@@ -50,6 +54,7 @@ function NavBar() {
           </ul>
 
         </div>
+
         <div className=' md:hidden mt-2 mr-4'>
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>

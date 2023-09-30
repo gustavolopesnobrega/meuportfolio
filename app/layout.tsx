@@ -1,5 +1,7 @@
 import './globals.css'
 import { Inter, Poppins } from 'next/font/google'
+import ScrollToTopButton from '@/components/scrollbtn'
+
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -19,9 +21,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" >
       <link rel="icon" href="/favicon.png" sizes="48x48" />
-      <body className={poppins.className + ' overflow-x-hidden'}>{children}</body>
+      <body className={poppins.className + ' overflow-x-hidden'} id='bodyId'>{children}
+        <ScrollToTopButton></ScrollToTopButton>
+      </body>
     </html>
   )
 }

@@ -6,7 +6,7 @@ import gnlogo from '@/public/logoglobogn.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
-
+import Languages from '@/components/languages';
 
 
 export default function Resume() {
@@ -23,12 +23,7 @@ export default function Resume() {
                     <nav className=" flex justify-between  gap-10 md:py-6 md:flex md:justify-center lg:justify-between lg:px-10 ">
                         <div className=' w-48 flex pt-4 md:pt-0 lg:pt-0 gap-2 '>
                             <Link href={'/'}><Image src={gnlogo} alt='logo' className='h-12 w-32'></Image></Link>
-                            {/* <div className='flex gap-2 pt-2 font-semibold'>
-            <button>PT</button>
-            <span className='pt-2'>|</span>
-            <button>EN</button>
-          </div> */}
-
+                            <Languages></Languages>
                         </div>
                         <div className={` absolute right-0 top-0 text-black flex justify-between bg-white w-full h-full transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                             <ul className=' flex flex-col py-28 px-64 gap-10 text-xl max-h-screen '>
@@ -39,11 +34,11 @@ export default function Resume() {
                         </div>
                         <ul className=' hidden md:flex mx-4 gap-2 md:px-24 lg:px-48 md:gap-16 font-medium py-2 lg:text-lg '>
                             <li className='md:hover:text-dots-blue '>
-                                <a href={"/"}>work</a>
+                                <a href={"/#projetos"}>work</a>
                             </li>
 
                             <li className='md:hover:text-dots-blue'>
-                                <a href={"/"} >contact</a>
+                                <a href={"/#contato"} >contact</a>
                             </li>
 
                             <li className=' text-black md:hover:text-dots-blue'>
@@ -75,7 +70,7 @@ export default function Resume() {
                         </div>
 
                         <div className="flex justify-center align-middle">
-                            <p className=" text-gray-800 ">I began my journey as a developer in February 2022 in the Systems for Internet course at UNIESP College in João Pessoa. During this period, I have been developing my skills in Web development. Currently, I am focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b>, and <b>Figma</b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b>Java</b>, and <b>Spring Boot</b>.
+                            <p className=" text-gray-800 ">I started my journey as a developer in February 2022 on the Internet Systems course at Faculdade UNIESP in João Pessoa. During this period, I have been developing my skills in Web development. Currently, I am focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> and < b>Figma </b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b >Java</b> and < b>Spring Boot</b>.
                             </p>
                         </div>
                     </div>
