@@ -155,7 +155,7 @@ export default function Home() {
               transition={{ duration: 1 }}
             >
               <div className=' justify-center lg:justify-start lg:flex lg:min-w-fit lg:mt-5 hover:scale-110 hover:ease-in duration-300 cursor-pointer'>
-                <Link href={""}><Image src={perfil} alt='foto de gustavo' className='md:w-auto lg:h-[40rem] '></Image></Link>
+                <Link href={"https://www.linkedin.com/in/gustavo-nobrega-514845187/"} target='_blank'><Image src={perfil} alt='foto de gustavo' className='md:w-auto lg:h-[40rem] '></Image></Link>
               </div>
             </motion.div>
 
