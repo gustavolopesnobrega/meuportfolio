@@ -7,7 +7,7 @@ import { AiOutlineEye } from 'react-icons/ai'
 function Portfolio() {
 
     return (
-        <div className=" bg-card-bg rounded-md flex flex-col p-6 max-w-md md:max-w-sm lg:max-w-sm hover:scale-110 hover:ease-in duration-300">
+        <div className=" bg-card-bg hover:bg-slate-200 rounded-md flex flex-col p-6 max-w-md md:max-w-sm lg:max-w-sm hover:scale-110 hover:ease-in duration-300">
             <div className="rounded-md flex  justify-center">
                 <Image src={devgustavonobrega} alt="CIM-website" className=" lg:h-60 "></Image>
             </div>
