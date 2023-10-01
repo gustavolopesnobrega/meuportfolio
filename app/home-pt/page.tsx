@@ -162,7 +162,7 @@ export default function Home() {
                         >
                             <div className='flex flex-col gap-4 justify-center px-8 md:text-xl '>
                                 <h1 className=' text-4xl font-semibold max-w-sm py-2 lg:text-5xl text-black w-80'>Gustavo <br />Nobrega</h1>
-                                <h2 className=' text-3xl font-semibold  py-2 lg:text-5xl text-black '>Desenvolvedor <br />Front End</h2>
+                                <h2 className=' text-3xl font-semibold  py-2 lg:text-5xl text-black '>Desenvolvedor <br />Front-End</h2>
                                 <p className=' leading-8 max-w-sm text-gray justify-center md:max-h-76 lg:w-[33rem] '>apaixonado pelo desenvolvimento de aplicações funcionais e responsivas que proporcionam uma experiência excepcional para os usuários finais. Atualmente, estou focado em tecnologias Front-End como <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> e <b>Figma</b>, bem como <b>SQL</b>, <b>lógica de programação</b>, <b>OOP</b>, <b>Java</b> e <b>Bota Spring</b>.</p>
                                 <div className='flex justify-center gap-12 pt-10 md:justify-normal'>
                                     <a href='#projetos ' className="bg-black hover:bg-dots-blue px-6 py-6 w-max rounded-xl text-gray-50" >Veja meu trabalho</a>

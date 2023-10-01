@@ -166,7 +166,7 @@ export default function Home() {
             >
               <div className='flex flex-col gap-4 justify-center px-8 md:text-xl '>
                 <h1 className=' text-4xl font-semibold max-w-sm py-2 lg:text-5xl text-black w-80'>Gustavo <br />Nobrega</h1>
-                <h2 className=' text-3xl font-semibold  py-2 lg:text-5xl text-black '>Full Stack <br />Web Developer</h2>
+                <h2 className=' text-3xl font-semibold  py-2 lg:text-5xl text-black '>Front-End <br />Web Developer</h2>
 
                 <p className=' leading-8 max-w-sm text-gray justify-center md:max-h-76 lg:w-[33rem] '>passionate about developing functional applications and responsive user interfaces that provide an exceptional experience for end users. Currently, I'm focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b>, and <b>Figma</b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b>Java</b>, and <b>Spring Boot</b>.</p>
 
