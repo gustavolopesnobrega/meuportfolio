@@ -69,7 +69,7 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <p className="mt-1 text-sm text-white">
-                                    Sua mensagem foi enviada com sucesso !
+                                    Sua mensagem foi enviada com sucesso!
                                 </p>
                             </div>
                         </div>
