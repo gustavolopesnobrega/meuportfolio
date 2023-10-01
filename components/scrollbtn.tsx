@@ -8,7 +8,7 @@ import Link from 'next/link';
 function ScrollToTopButton() {
     return (
         <Link href={"#bodyId"}
-            className={`fixed scroll-smooth bottom-4 right-4 p-2 rounded-full bg-black text-white hover:bg-dots-blue transition-opacity duration-500'
+            className={`fixed scroll-smooth bottom-4 right-4 p-2 rounded-full bg-dots-blue text-white hover:bg-indigo-700 hover:scale-110 hover:ease-in duration-1000'
                 }`}
 
             aria-label="Scroll to top"
