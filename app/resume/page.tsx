@@ -5,8 +5,15 @@ import { useState } from 'react';
 import gnlogo from '@/public/logoglobogn.png'
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
+import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp, AiFillHtml5 } from 'react-icons/ai'
 import Languages from '@/components/languages';
+import { FaReact, FaGitAlt } from 'react-icons/fa';
+import { SiNextdotjs, SiJavascript, SiTailwindcss, SiSpringboot } from 'react-icons/si';
+import { DiJava, DiCss3 } from 'react-icons/di';
+
+
+
+
 
 
 export default function Resume() {
@@ -70,7 +77,7 @@ export default function Resume() {
                         </div>
 
                         <div className="flex justify-center align-middle">
-                            <p className=" text-gray-800 ">I started my journey as a developer in February 2022 on the Internet Systems course at Faculdade UNIESP in João Pessoa. During this period, I have been developing my skills in Web development. Currently, I am focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> and < b>Figma </b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b >Java</b> and < b>Spring Boot</b>.
+                            <p className=" text-gray-800 ">I started my journey as a developer in February 2022 on the Internet Systems course at Faculdade UNIESP in João Pessoa. During this period, I have been developing my skills in Web development. Currently, I am focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> and < b>Figma </b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b>Rest API</b>, <b >Java</b> and < b>Spring Boot</b>.
                             </p>
                         </div>
                     </div>
@@ -132,14 +139,32 @@ export default function Resume() {
                             <span>JavaScript</span>
                             <span>React</span>
                             <span>TailwindCSS</span>
+                            <span>NextJs</span>
+
+
                         </div>
                         <div className="flex flex-col">
                             <span>Java</span>
                             <span>Spring Boot</span>
-                            <span>Rest API</span>
                             <span>Git</span>
                             <span>Github</span>
                         </div>
+                    </div>
+
+                    <div className='flex justify-center flex-wrap px-4 text-slate-800 text-3xl lg:text-4xl gap-4'>
+                        <AiFillHtml5 className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></AiFillHtml5>
+                        <DiCss3 className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></DiCss3>
+                        <SiJavascript className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiJavascript>
+                        <FaReact className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></FaReact>
+                        <SiTailwindcss className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiTailwindcss>
+                        <SiNextdotjs className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiNextdotjs>
+                        <DiJava className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></DiJava>
+                        <SiSpringboot className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiSpringboot>
+                        <FaGitAlt className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></FaGitAlt>
+                        <AiFillGithub className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></AiFillGithub>
+
+
+
                     </div>
                     <div className=" pb-20">
                         <h2 className="py-10 font-bold text-slate-800">Download my cv as PDF file.</h2>

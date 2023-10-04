@@ -5,10 +5,12 @@ import { useState } from 'react';
 import gnlogo from '@/public/logoglobogn.png'
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
+import { AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp, AiFillHtml5 } from 'react-icons/ai'
 import Languages from '@/components/languages';
 import NavBarPt from '@/components/navbarpt';
-
+import { FaReact, FaGitAlt } from 'react-icons/fa';
+import { SiNextdotjs, SiJavascript, SiTailwindcss, SiSpringboot } from 'react-icons/si';
+import { DiJava, DiCss3 } from 'react-icons/di';
 
 
 export default function Resume() {
@@ -31,7 +33,7 @@ export default function Resume() {
                         </div>
 
                         <div className="flex justify-center align-middle">
-                            <p className=" text-gray-800 ">Iniciei minha jornada como desenvolvedor em fevereiro de 2022 no curso de Sistemas para Internet da Faculdade UNIESP em João Pessoa. Durante este período, venho desenvolvendo minhas habilidades em desenvolvimento Web. Atualmente, estou focado em tecnologias Front-End como <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> e < b>Figma</b>, bem como <b>SQL</b>, <b>lógica de programação</b>, <b>OOP</b>, <b>Java</b> e < b>Spring Boot</b>.
+                            <p className=" text-gray-800 ">Iniciei minha jornada como desenvolvedor em fevereiro de 2022 no curso de Sistemas para Internet da Faculdade UNIESP em João Pessoa. Durante este período, venho desenvolvendo minhas habilidades em desenvolvimento Web. Atualmente, estou focado em tecnologias Front-End como <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> e < b>Figma</b>, bem como <b>SQL</b>, <b>lógica de programação</b>, <b>OOP</b>, <b>Rest API</b>, <b>Java</b> e < b>Spring Boot</b>.
                             </p>
                         </div>
                     </div>
@@ -97,10 +99,24 @@ export default function Resume() {
                         <div className="flex flex-col">
                             <span>Java</span>
                             <span>Spring Boot</span>
-                            <span>Rest API</span>
                             <span>Git</span>
                             <span>Github</span>
                         </div>
+                    </div>
+                    <div className='flex justify-center flex-wrap px-4 text-slate-800 text-3xl lg:text-4xl gap-4'>
+                        <AiFillHtml5 className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></AiFillHtml5>
+                        <DiCss3 className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></DiCss3>
+                        <SiJavascript className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiJavascript>
+                        <FaReact className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></FaReact>
+                        <SiTailwindcss className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiTailwindcss>
+                        <SiNextdotjs className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiNextdotjs>
+                        <DiJava className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></DiJava>
+                        <SiSpringboot className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></SiSpringboot>
+                        <FaGitAlt className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></FaGitAlt>
+                        <AiFillGithub className='hover:text-dots-blue hover:scale-150 hover:ease-in duration-150'></AiFillGithub>
+
+
+
                     </div>
                     <div className=" pb-20">
                         <h2 className="py-10 font-bold text-slate-800">Baixe meu curriculo como arquivo PDF.</h2>

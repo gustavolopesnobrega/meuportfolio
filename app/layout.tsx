@@ -1,7 +1,8 @@
 import './globals.css'
 import { Inter, Poppins } from 'next/font/google'
-import ScrollToTopButton from '@/components/scrollbtn'
+import ScrollToTopButton from '@/components/scrollUpBtn'
 import FooterBar from '@/components/footer/footer'
+import ScrollToTop from '@/components/scrollUpBtn'
 
 
 const inter = Inter({ subsets: ['latin'] })

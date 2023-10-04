@@ -154,7 +154,7 @@ export default function Home() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <div className=' justify-center lg:justify-start lg:flex lg:min-w-fit lg:mt-5 hover:scale-110 hover:ease-in duration-300 cursor-pointer'>
+              <div className=' justify-center lg:justify-start lg:flex lg:min-w-fit lg:mt-5 hover:scale-110 hover:ease-in duration-200 cursor-pointer'>
                 <Link href={"https://www.linkedin.com/in/gustavo-nobrega-514845187/"} target='_blank'><Image src={perfil} alt='foto de gustavo' className='md:w-auto lg:h-[40rem] '></Image></Link>
               </div>
             </motion.div>
