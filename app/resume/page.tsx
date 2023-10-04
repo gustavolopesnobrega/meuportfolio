@@ -77,7 +77,7 @@ export default function Resume() {
                         </div>
 
                         <div className="flex justify-center align-middle">
-                            <p className=" text-gray-800 ">I started my journey as a developer in February 2022 on the Internet Systems course at Faculdade UNIESP in João Pessoa. During this period, I have been developing my skills in Web development. Currently, I am focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b> and < b>Figma </b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b>Rest API</b>, <b >Java</b> and < b>Spring Boot</b>.
+                            <p className=" text-gray-800 ">I started my journey as a developer in February 2022 on the Internet Systems course at Faculdade UNIESP in João Pessoa. During this period, I have been developing my skills in Web development. Currently, I am focused on Front-End technologies such as <b>React</b>, <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b>, <b>Tailwind</b> and < b>Figma </b>, as well as <b>SQL</b>, <b>programming logic</b>, <b>OOP</b>, <b>Rest API</b>, <b >Java</b> and < b>Spring Boot</b>.
                             </p>
                         </div>
                     </div>
