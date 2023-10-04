@@ -20,6 +20,8 @@ import Link from 'next/link';
 import Portfolio from '@/components/portfolio';
 import { motion } from 'framer-motion';
 import SocialContactBar from '@/components/socialContactBar';
+import FooterBar from '@/components/footer/footer'
+
 
 
 
